@@ -11,7 +11,7 @@ class Task extends Model
     Schema::create('tasks', function (Blueprint $table) {
         $table->id();
         $table->string('name');
-        $table->text('city')->nullable();
+        $table->text('city');
         $table->timestamps();
     });
 }
