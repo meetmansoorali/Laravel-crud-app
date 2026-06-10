@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Task;
 
 class UserController extends Controller
 {
     public function show()
     {
-        return view('welcome');
+        $tasks = Task::all();
+        return view('welcome', compact('tasks'));
     }
     public function add()
     {

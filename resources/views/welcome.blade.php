@@ -21,16 +21,17 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($tasks as $task)
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+                <th scope="row">{{ $task->id }}</th>
+                <td>{{ $task->name }}</td>
+                <td>{{ $task->city }}</td>
                 <td>
                     <button class="btn btn-primary"><a href="{{ route('update') }}" class="text-white text-decoration-none">Edit</a></button>
                     <button class="btn btn-danger">Delete</button>
                 </td>
             </tr>
-          
+          @endforeach
         </tbody>
     </table>
     
