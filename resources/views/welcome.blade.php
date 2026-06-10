@@ -26,7 +26,7 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>
-                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-primary"><a href="{{ route('update') }}" class="text-white text-decoration-none">Edit</a></button>
                     <button class="btn btn-danger">Delete</button>
                 </td>
             </tr>
