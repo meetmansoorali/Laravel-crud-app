@@ -10,4 +10,8 @@ class UserController extends Controller
     {
         return view('welcome');
     }
+    public function add()
+    {
+        return view('add');
+    }
 }
