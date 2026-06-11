@@ -11,16 +11,17 @@
 
 <body>
     <h1 class="text-center bg-primary text-white p-3">Add User - {{ config("app.name") }}</h1>
-   <form method="POST" action="{{ route('add') }}" class="w-50 mx-auto p-5 border">
+   <form method="POST" action="/submit" class="w-50 mx-auto p-5 border">
     @csrf
+
   <div class="form-group mb-5">
     <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
    
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">City</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="City">
+    <input type="text" class="form-control" name="city" id="exampleInputPassword1" placeholder="City">
   </div>
  
   <button type="submit" class="btn btn-success d-block mx-auto mb-3 mt-3">Add User</button>

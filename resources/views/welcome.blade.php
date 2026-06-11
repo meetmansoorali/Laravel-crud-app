@@ -11,7 +11,7 @@
 
 <body>
     <h1 class="text-center bg-primary text-white p-3">Welcome to {{ config("app.name") }}
-                            <button class="btn btn-success"><a href="{{ route('add') }}" class="text-white text-decoration-none">Add User </a></button>
+                            <button class="btn btn-success"><a href="/add" class="text-white text-decoration-none">Add User </a></button>
 
     </h1>
     <table class="table table-striped">
