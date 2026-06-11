@@ -18,6 +18,7 @@ class UserController extends Controller
     }
     public function update()
     {
-        return view('update');
+        $tasks = Task::all()->where('id');
+        return view('update', compact('tasks'));
     }
 }

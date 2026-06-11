@@ -10,7 +10,10 @@
 </head>
 
 <body>
-    <h1 class="text-center bg-primary text-white p-3">Welcome to {{ config("app.name") }}</h1>
+    <h1 class="text-center bg-primary text-white p-3">Welcome to {{ config("app.name") }}
+                            <button class="btn btn-success"><a href="{{ route('add') }}" class="text-white text-decoration-none">Add User </a></button>
+
+    </h1>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -27,7 +30,7 @@
                 <td>{{ $task->name }}</td>
                 <td>{{ $task->city }}</td>
                 <td>
-                    <button class="btn btn-primary"><a href="{{ route('update') }}" class="text-white text-decoration-none">Edit</a></button>
+                    <button class="btn btn-primary"><a href="{{ route('update' , $task->id) }}" class="text-white text-decoration-none">Edit</a></button>
                     <button class="btn btn-danger">Delete</button>
                 </td>
             </tr>
